@@ -1,8 +1,10 @@
 package main
 
-import (
-	_ "github.com/KristinaEtc/slflog"
+// Function init() from this packege must execute first;
+// do not move from the 1st position in import list.
+import _ "github.com/KristinaEtc/slflog"
 
+import (
 	"github.com/KristinaEtc/new-project-go/tmplib"
 
 	"github.com/KristinaEtc/config"
@@ -31,12 +33,10 @@ var globalOpt = ConfFile{
 }
 
 func main() {
-
 	config.ReadGlobalConfig(&globalOpt, "template options")
 
-	log.Infof("%s", globalOpt.Name)
-
 	log.Error("----------------------------------------------")
+	log.Infof("%s", globalOpt.Name)
 
 	log.Infof("BuildDate=%s\n", BuildDate)
 	log.Infof("GitCommit=%s\n", GitCommit)
