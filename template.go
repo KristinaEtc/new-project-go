@@ -8,7 +8,7 @@ import (
 	"github.com/KristinaEtc/new-project-go/tmplib"
 
 	"github.com/KristinaEtc/config"
-	"github.com/ventu-io/slf"
+	"github.com/KristinaEtc/slf"
 )
 
 var log = slf.WithContext("template.go")
@@ -38,14 +38,14 @@ func main() {
 	log.Error("----------------------------------------------")
 	log.Infof("%s", globalOpt.Name)
 
-	log.Infof("BuildDate=%s\n", BuildDate)
-	log.Infof("GitCommit=%s\n", GitCommit)
-	log.Infof("GitBranch=%s\n", GitBranch)
-	log.Infof("GitState=%s\n", GitState)
-	log.Infof("GitSummary=%s\n", GitSummary)
-	log.Infof("VERSION=%s\n", Version)
+	log.Infof("BuildDate=%s", BuildDate)
+	log.Infof("GitCommit=%s", GitCommit)
+	log.Infof("GitBranch=%s", GitBranch)
+	log.Infof("GitState=%s", GitState)
+	log.Infof("GitSummary=%s", GitSummary)
+	log.Infof("VERSION=%s", Version)
 
 	log.Info("Starting working...")
 
-	tmpllib.PrintsTmpl("Yo")
+	tmpllib.PrintsTmpl("\nYo")
 }

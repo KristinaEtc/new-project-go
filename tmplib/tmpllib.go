@@ -1,6 +1,6 @@
 package tmpllib
 
-import "github.com/ventu-io/slf"
+import "github.com/KristinaEtc/slf"
 
 var pwdCurr string = "KristinaEtc/tmpl"
 var log = slf.WithContext(pwdCurr)
